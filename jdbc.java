@@ -67,6 +67,30 @@ public class create {
 
      }
     }
+    
+     public void queries() throws SQLException {
+  
+    Connection c3 = DriverManager.getConnection("jdbc:mysql://localhost/capg", "root", "root");
+    Statement s2 = c3.createStatement();
+
+    //logical operators - and,or,not
+    //String query = "select * from participants where id = 1 and name = 'john'";
+    ResultSet rs = s2.executeQuery("select * from participants where id = 1 or country = 'USA'");
+    //and operator
+     //ResultSet rs = s2.executeQuery("select * from participants where id = 1 and country = 'USA'");
+         
+   //not operaor
+          //ResultSet rs = s2.executeQuery("select * from participants where id = 1 not country = 'USA'");
+    
+        while(rs.next()){
+
+        System.out.print("ID: " + rs.getInt("id") + "\t");
+        System.out.print("Name: " + rs.getString("name") + "\t");
+        System.out.print("Age: " + rs.getInt("age") + "\t");
+        System.out.print("Country: " + rs.getString("country") + "\n");
+    }
+
+   }
 
   
 
@@ -76,5 +100,7 @@ public class create {
        // c1.credb();
        //c1.manipluate();
        c1.alteration();
+        c1.operators();
+        c1.queries();
     }
 }
