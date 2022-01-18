@@ -50,6 +50,23 @@ public class create {
         }
      
    }
+    
+    public void operators() throws SQLException{
+
+     Connection c4 = DriverManager.getConnection("jdbc:mysql://localhost/capg", "root", "root");
+     Statement s5 = c4.createStatement();
+     //between operator acsts as range 
+     ResultSet rs = s5.executeQuery("select * from participants where name between 'john' and 'mikasa' ");
+     
+     while(rs.next()){
+
+        System.out.print(rs.getInt("id") + "\t");
+        System.out.print(rs.getString("name") + "\t");
+        System.out.print(rs.getInt("age") + "\t");
+        System.out.print(rs.getString("country") + "\n");
+
+     }
+    }
 
   
 
