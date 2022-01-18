@@ -91,6 +91,27 @@ public class create {
     }
 
    }
+    
+    public void likeoperator() throws SQLException{
+
+        /** like operator is used with select command in order to find
+         * patterns in the table,similar lo regex property
+         */
+
+         Connection c5 = DriverManager.getConnection("jdbc:mysql://localhost/capg", "root", "root");
+         Statement s6 = c5.createStatement();
+         //wild cards and patterns
+         ResultSet rs = s6.executeQuery("select * from participants where country LIKE 'a____%'");
+         while(rs.next()){
+
+            
+           System.out.print(rs.getInt("id") + "\t");
+           System.out.print(rs.getString("name") + "\t");
+           System.out.print(rs.getInt("age") + "\t");
+           System.out.print(rs.getString("country") + "\n");
+
+         }
+    }
 
   
 
@@ -102,5 +123,6 @@ public class create {
        c1.alteration();
         c1.operators();
         c1.queries();
+        c1.likeoperators();
     }
 }
