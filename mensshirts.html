@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!...style for grid...>
+        <style>
+            body {
+                margin: 0px;
+            }
+
+            .container {
+
+                width: 200vw;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 50px 1fr 1fr 100px;
+                gap: 10px;
+                padding: 10px;
+                box-sizing: content-box;
+            }
+
+            .header {
+                grid-column-start: 1;
+                grid-column-end: 4;
+              
+            }
+
+            .content-large {
+
+                grid-row-start: 2;
+                grid-row-end: span2;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+          
+
+        
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!...navbar...>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">ABC</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link "  href="http://127.0.0.1:5500/src/Front%20End/shopify.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://127.0.0.1:5500/src/Front%20End/myorders.html">My Orders</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="http://127.0.0.1:5500/src/Front%20End/cartinfo.html">Cart</a> 
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="http://127.0.0.1:5500/src/Front%20End/settings.html">Settings</a> 
+                                </li>
+
+
+
+                               
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+
+                <!...navbar ending...>
+        </div>
+        <div class="content-large">
+            <!...content...>
+                <div class="row">
+                    <!...card1...>
+                        <div class="card mx-3 my-4" style="width: 18rem;">
+                            <img src="https://m.media-amazon.com/images/I/81jX8p57T3L._AC_UL320_.jpg" class="card-img-top" style="height: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">ABC Brand</h5>
+                                <p class="card-text">Premium quality brand for mens</p>
+                                <h5 class="card-title">Rs.999</h5>
+                                <a href="http://127.0.0.1:5500/src/Front%20End/cart.html" class="btn btn-primary">Add Cart</a>
+                            </div>
+                        </div>
+
+
+                        <div class="card mx-3 my-4" style="width: 18rem;">
+                            <img src="https://m.media-amazon.com/images/I/61bjhKzHKjL._AC_UL320_.jpg" class="card-img-top" >
+                            <div class="card-body">
+                                <h5 class="card-title">U.S.Polo </h5>
+                                <p class="card-text">Best seller in mens dressing,Hurry up</p>
+                                <h5 class="card-title">Rs.500</h5>
+                                <a href="http://127.0.0.1:5500/src/Front%20End/cart.html" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card mx-3 my-4" style="width: 18rem;">
+                            <img src="https://m.media-amazon.com/images/I/91d1AJ00UvL._AC_UL320_.jpg" class="card-img-top" style="height: 380px;" >
+                            <div class="card-body">
+                                <h5 class="card-title">Denim Co.</h5>
+                                <p class="card-text">Hot seller of the week,may run out of stock.</p>
+                                <h5 class="card-title">Rs.950</h5>
+                                <a href="http://127.0.0.1:5500/src/Front%20End/cart.html" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card mx-3 my-4" style="width: 18rem;">
+                            <img src="https://m.media-amazon.com/images/I/41nvyksD5lL._AC_UL320_.jpg" class="card-img-top" >
+                            <div class="card-body">
+                                <h5 class="card-title">Cooper</h5>
+                                <p class="card-text">Stylish Men Stretch Dress Shirt</p>
+                                <h5 class="card-title">Rs.888</h5>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card mx-3 my-4" style="width: 18rem;">
+                            <img src="https://m.media-amazon.com/images/I/71ta1E1wfGS._AC_UL320_.jpg " class="card-img-top" >
+                            <div class="card-body">
+                                <h5 class="card-title">R&B</h5>
+                                <p class="card-text">Men's Casual Mandarin Knit Shirt</p>
+                                <h5 class="card-title">Rs.760</h5>
+                                <a href="http://127.0.0.1:5500/src/Front%20End/cart.html" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+
+                        <div class="card mx-3 my-4" style="width: 18rem;">
+                            <img src="https://m.media-amazon.com/images/I/71nkNwMQoxL._AC_UL320_.jpg" class="card-img-top" >
+                            <div class="card-body">
+                                <h5 class="card-title">Dennis Lingo</h5>
+                                <p class="card-text">Dennis Lingo Men's Solid Slim Fit Casual Shirt</p>
+                                <h5 class="card-title">Rs.1000</h5>
+                                <a href="http://127.0.0.1:5500/src/Front%20End/cart.html" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                 <!...cards ending...>
+                </div>
+
+
+
+        <!...content large.....>
+        </div>
+
+        <div class="content-small">
+            <!...content small...>
+            <div class="card mx-3 my-4" style="width: 18rem; ">
+               
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card mx-3 my-4" style="width: 18rem; height: 20rem; border-radius: 0%;">
+               
+                <div class="card-body">
+                  <h5 class="card-title">Price Range</h5>
+                  <!...price range...>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Rs. 10k - 15K
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Rs. 5000- 10K
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Rs. 1000 - 5000
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                    Rs. 500 - 1000
+                    </label>
+                  </div>
+                  <!...price range...>
+                  
+
+                  <!...Category...>
+                  <h5 class="card-title">Category</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Formal Shirts
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Party Wear shirts
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      T-Shirts
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Inners
+                    </label>
+                  </div>
+
+            
+                  <!...Category...>
+                </div>
+              </div>
+            <!...content small...>
+
+            <!...content small 3 card...>
+
+            <div class="card mx-3 my-5" style="width: 18rem;">
+                
+                <div class="card-body">
+                  <h5 class="card-title">Brands</h5>
+                
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Top Brands
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Premium Brands
+                    </label>
+                  </div>
+
+                   
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Desi Brands
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Made from ABC
+                    </label>
+                  </div>
+                  
+
+        
+                
+               
+                </div>
+              </div>
+              <!...content small 3 card...>
+
+
+        </div>
+
+       
+
+
+
+    </div>
+
+
+</body>
+
+</html>
