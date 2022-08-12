@@ -27,6 +27,27 @@ class HelloWorld {
           int count = 0;
           String c = "hellooo";
           
+          /*equals() - return type: boolean 
+          compares one string object to another string object */
+          
+          String a = "hello";
+          String b = "hello";
+          if(a.equals(b));
+          System.out.println("equal");
+          
+          /*replace(char old, char new) - return type: string
+          replaces the old character with new charatcer with in
+          the string*/
+          
+          String a = "hello";
+          System.out.println(a.replace('h','H'));
+          
+          ?* replace(old charasequence, new charsequence)
+          replaces a charsequence of a particular string to new charsequence */
+          
+          System.out.println(a.replace("ello","ai"));
+ 
+          
          
     }
 }
