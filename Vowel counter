@@ -1,0 +1,14 @@
+class HelloWorld {
+    public static void main(String[] args) {
+         int count = 0;
+         String[] A = {"a","e","i","o","u"};
+          String c = "aeiou";
+          for(int j = 0; j < A.length; j++){
+              if(c.contains(A[j])){
+                 count++;
+              }
+              
+          }
+          System.out.println(count);
+    }
+}
